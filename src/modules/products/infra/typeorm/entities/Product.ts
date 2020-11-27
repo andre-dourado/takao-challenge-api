@@ -24,7 +24,7 @@ class Product {
   @Column()
   descricao: string;
 
-  @Column()
+  @Column('double precision')
   preco: number;
 
   @Column()
