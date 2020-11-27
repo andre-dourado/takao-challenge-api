@@ -33,7 +33,7 @@ class Product {
   @Column({ name: 'categoria_id' })
   categoriaId: string;
 
-  @Column()
+  @Column({ name: 'quantidade_em_estoque' })
   quantidadeEmEstoque: number;
 
   @ManyToOne(() => Category)
