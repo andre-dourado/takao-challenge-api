@@ -16,4 +16,4 @@ const development = {
   ],
 }
 
-module.exports = process.env.ENVIRONMENT ? production : development;
+module.exports = process.env.ENVIRONMENT === "production" ? production : development;
