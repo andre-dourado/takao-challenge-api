@@ -25,9 +25,6 @@ class Purchase {
   @JoinColumn({ name: 'status_id' })
   status: PurchaseStatus;
 
-  @Column()
-  finalizado: boolean;
-
   @CreateDateColumn()
   created_at: Date;
 
