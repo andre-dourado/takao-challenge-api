@@ -6,9 +6,12 @@ import {
   UpdateDateColumn,
   ManyToMany,
   JoinTable,
+  ManyToOne,
+  JoinColumn,
 } from 'typeorm';
 
 import Product from '@modules/products/infra/typeorm/entities/Product';
+import Purchase from '@modules/purchases/infra/typeorm/entities/Purchase';
 
 @Entity('ordered_items')
 class OrderedItem {
@@ -18,6 +21,13 @@ class OrderedItem {
   @ManyToMany(() => Product)
   @JoinTable()
   product: Product[];
+
+  @Column({ name: 'purchase_id', default: null })
+  purchaseId: string;
+
+  @ManyToOne(() => Purchase)
+  @JoinColumn({ name: 'purchase_id' })
+  purchase: Purchase;
 
   @Column()
   quantidade: number;

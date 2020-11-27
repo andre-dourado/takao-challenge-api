@@ -10,6 +10,8 @@ import IOrderedItemsRepository from '@modules/orderedItems/repositories/IOrdered
 import OrderedItemsRepository from '@modules/orderedItems/infra/typeorm/repositories/OrderedItemsRepository';
 import IStatusRepository from '@modules/status/repositories/IStatusRepository';
 import StatusRepository from '@modules/status/infra/typeorm/repositories/StatusRepository';
+import PurchasesRepository from '@modules/purchases/infra/typeorm/repositories/PurchasesRepository';
+import IPurchasesRepository from '@modules/purchases/repositories/IPurchasesRepository';
 
 container.registerSingleton<ICategoriesRepository>(
   'CategoriesRepository',
@@ -24,6 +26,11 @@ container.registerSingleton<IProductsRepository>(
 container.registerSingleton<IOrderedItemsRepository>(
   'OrderedItemsRepository',
   OrderedItemsRepository,
+);
+
+container.registerSingleton<IPurchasesRepository>(
+  'PurchasesRepository',
+  PurchasesRepository,
 );
 
 container.registerSingleton<IStatusRepository>(
