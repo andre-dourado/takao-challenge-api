@@ -43,7 +43,7 @@ export default {
   config: {
     disk: {},
     aws: {
-      bucket: 'app-pubar',
+      bucket: 'app-takao',
     },
   },
 } as IUploadConfig;
