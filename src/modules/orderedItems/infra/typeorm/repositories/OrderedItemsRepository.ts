@@ -12,7 +12,7 @@ class OrderedItemsRepository implements IOrderedItemsRepository {
 
   public async findAll(): Promise<OrderedItem[]> {
     return this.ormRepository.find({
-      relations: ['products'],
+      relations: ['product'],
     });
   }
 }

@@ -4,8 +4,6 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
-  ManyToMany,
-  JoinTable,
   ManyToOne,
   JoinColumn,
 } from 'typeorm';
@@ -18,9 +16,12 @@ class OrderedItem {
   @PrimaryGeneratedColumn()
   id: string;
 
-  @ManyToMany(() => Product)
-  @JoinTable()
-  products: Product[];
+  @Column({ name: 'product_id' })
+  productId: string;
+
+  @ManyToOne(() => Product)
+  @JoinColumn({ name: 'product_id' })
+  product: Product;
 
   @Column({ name: 'purchase_id', default: null })
   purchaseId: string;

@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
+import { classToClass } from 'class-transformer';
 
 import OrderedItemsListService from '@modules/orderedItems/services/OrderedItemsListService';
 
@@ -9,6 +10,6 @@ export default class CartController {
 
     const orderedItems = await orderedItemsList.execute();
 
-    return response.json(orderedItems);
+    return response.json(classToClass(orderedItems));
   }
 }
