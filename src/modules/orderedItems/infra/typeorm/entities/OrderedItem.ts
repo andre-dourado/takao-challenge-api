@@ -20,7 +20,7 @@ class OrderedItem {
 
   @ManyToMany(() => Product)
   @JoinTable()
-  product: Product[];
+  products: Product[];
 
   @Column({ name: 'purchase_id', default: null })
   purchaseId: string;
