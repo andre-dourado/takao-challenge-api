@@ -32,7 +32,7 @@ class OrderedItem {
   @Column()
   quantidade: number;
 
-  @Column()
+  @Column('double precision')
   preco: number;
 
   @Column()
