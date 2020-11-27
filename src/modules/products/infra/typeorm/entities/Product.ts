@@ -33,6 +33,9 @@ class Product {
   @Column({ name: 'categoria_id' })
   categoriaId: string;
 
+  @Column()
+  quantidadeEmEstoque: number;
+
   @ManyToOne(() => Category)
   @JoinColumn({ name: 'categoria_id' })
   categoria: Category;
