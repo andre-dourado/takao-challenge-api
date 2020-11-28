@@ -2,7 +2,8 @@
 ## Introdução
 
 Este backend foi proposto pela equipe de desenvolvimento da empresa Takao. A ideia é montar uma API no qual baseia-se em um mercado fictício. 
-Através deste é possível retornar dados previamente cadastrados.
+Através deste é possível retornar dados previamente cadastrados. No desenvolvimento foi utilizado o Node.js em conjunto com o PostegreSQL. 
+Além disso, vale destacar que o projeto foi desenvolvido respeitando os princípios SOLID. 
 
 ### Pré-requisitos
 
@@ -120,3 +121,24 @@ Através deste é possível retornar dados previamente cadastrados.
   }
 ]
 ```
+
+## Tecnologias
+
+- [Node.js](https://nodejs.org/en/)
+- [Typescript][ts]
+- [TypeORM](https://typeorm.io/#/)
+- [date-fns](https://date-fns.org/)
+- [express](https://expressjs.com)
+- [pg](https://node-postgres.com/)
+- [date-fns](https://date-fns.org/)
+- [VS Code][vscode] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
+
+---
+
+Made with ♥ by André Dourado :wave: [Get in touch!](https://www.linkedin.com/in/andre-dourado/)
+
+[ts]: https://www.typescriptlang.org
+[vscode]: https://code.visualstudio.com/
+[yarn]: https://yarnpkg.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
